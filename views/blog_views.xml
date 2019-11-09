@@ -22,7 +22,13 @@
                                 <field name="name" placeholder="Название"/>
                             </h1>
                         </div>
-
+                        <group>
+                            <field name="content"/>
+                        </group>
+                        <group>
+                            <field name="place_id" widget="many2one"/>
+                            <field name="photo_ids" widget="many2many"/>
+                        </group>
                     </sheet>
                     <div class="oe_chatter">
 

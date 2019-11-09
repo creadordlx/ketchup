@@ -7,5 +7,5 @@ class KetchupServices(models.Model):
 
     name = fields.Char(string='name', size=128)
     content = fields.Text(string='content')
-    price = fields.Float(string='price', default=0)
+    price = fields.Integer(string='price', default=0)
     tour_ids = fields.Many2many('ketchup.tours', string='tour_ids')
