@@ -28,6 +28,12 @@
         'views/frontend/layout.xml',
         'views/frontend/main.xml',
         'data/mail_servers.xml',
+        'views/blog_views.xml',
+        'views/places_views.xml',
+        'views/services_views.xml',
+        'views/tours_views.xml',
+        'views/menuitems.xml',
+
     ],
     'sequence': -1,
     'application': True,

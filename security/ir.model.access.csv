@@ -1,1 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ketchup_blog,ketchup.group.blog,model_ketchup_blog,,1,1,1,1
+access_ketchup_places,ketchup.group.places,model_ketchup_places,,1,1,1,1
+access_ketchup_services,ketchup.group.services,model_ketchup_services,,1,1,1,1
+access_ketchup_tours,ketchup.group.tours,model_ketchup_tours,,1,1,1,1

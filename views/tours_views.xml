@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="ketchup.tours_list">
+            <field name="name">ketchup.tours.tree</field>
+            <field name="model">ketchup.tours</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="ketchup.tours_form">
+            <field name="name">ketchup.tours.form</field>
+            <field name="model">ketchup.tours</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Название" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Название"/>
+                            </h1>
+                        </div>
+<!--                        <group>-->
+<!--                            <field name="status" readonly="True"/>-->
+<!--                            <field name="description"/>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="metering_unit_ids" widget="many2many"/>-->
+<!--                            <field name="drainage_tank_ids" widget="many2many"/>-->
+<!--                            <field name="oil_gas_separator_ids" widget="many2many"/>-->
+<!--                            <field name="drill_pump_ids" widget="many2many"/>-->
+<!--                            <field name="enclosed_switchgear_ids" widget="many2many"/>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="status_points_max" readonly="1"/>-->
+<!--                            <field name="status_points" readonly="1"/>-->
+<!--                            <field name="status_multiplier" invisible="True"/>-->
+<!--                            <field name="status_percentage" readonly="1"/>-->
+<!--                        </group>-->
+                    </sheet>
+                    <div class="oe_chatter">
+
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="ketchup.action_tours_list">
+            <field name="name">Tours</field>
+            <field name="res_model">ketchup.tours</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

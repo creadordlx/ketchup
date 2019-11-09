@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <menuitem id="ketchup.menu_root" name="Ketchup" />
+
+        # ToursTab
+        <menuitem id="ketchup.tours" name="Tours" parent="ketchup.menu_root" />
+        <menuitem id="ketchup.action_tours" name="Tour List" parent="ketchup.tours"
+            action="ketchup.action_tours_list" />
+
+        # ServicesTab
+        <menuitem id="ketchup.services" name="Services" parent="ketchup.menu_root" />
+        <menuitem id="ketchup.action_services" name="Services List" parent="ketchup.services"
+            action="ketchup.action_services_list" />
+
+        # BlogTab
+        <menuitem id="ketchup.blog" name="Blog" parent="ketchup.menu_root" />
+        <menuitem id="ketchup.action_blog" name="Blog List" parent="ketchup.blog"
+            action="ketchup.action_blog_list" />
+
+        # PlacesTab
+        <menuitem id="ketchup.places" name="Places" parent="ketchup.menu_root" />
+        <menuitem id="ketchup.action_places" name="Places List" parent="ketchup.places"
+            action="ketchup.action_places_list" />
+    </data>
+</odoo>
