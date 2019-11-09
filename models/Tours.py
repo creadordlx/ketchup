@@ -10,7 +10,7 @@ class KetchupTours(models.Model):
     rating = fields.Float('rating', default=0.0)
 
     place_ids = fields.Many2many('ketchup.places', string='place_ids')
-    blog_id = fields.One2many('ketchup.blog', 'tour_id', string='blog_id')
+    blog_ids = fields.One2many('ketchup.blog', 'tour_id', string='blog_id')
     service_ids = fields.Many2many('ketchup.services', string='service_ids')
     photo_ids = fields.One2many('ir.attachment', 'tour_id', string='photo_ids')
     type = fields.Selection(string='type', selection=[(0, 'Hot'), (1, 'New'), (2, 'Popular')])

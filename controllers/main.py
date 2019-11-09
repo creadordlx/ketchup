@@ -10,7 +10,7 @@ class Main(http.Controller):
         services = request.env["ketchup.services"].search([], limit=4)
         for s in tours:
             print(s.name)
-            print(s.photo_ids[0].id)
+            print(len(s.photo_ids))
         return request.render("ketchup.index", {
             "title": "Home",
             "tours": tours,
@@ -83,3 +83,9 @@ class Main(http.Controller):
     @http.route('/js_mod', auth='public')
     def js_mod(self, **kw):
         return request.render("ketchup.js_mod", {})
+
+    @http.route('/tours/create', auth='public')
+    def tours_create(self, **kw):
+        return request.render('ketchup.create_tour', {
+            "title": 'Создание Тура'
+        })

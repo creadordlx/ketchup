@@ -2082,8 +2082,16 @@
                             <div class="row">
                                 <t t-foreach="tours" t-as="t">
                                     <div class="col-lg-3 promo ftco-animate">
-                                        <a href="#" class="promo-img mb-4"
-                                           t-attf-style="background-image: url('/web/binary/image?model=ir.attachment&amp;field=datas&amp;id={{t.photo_ids[0].id}}');"></a>
+                                        <t t-if="len(t.photo_ids) == 0">
+                                            <a href="#" class="promo-mg mb-4"
+                                               style="background-image: url('https://www.tripuraconstructions.com/wp-content/uploads/2019/01/lorem_ipsum_by_neosh-1-770x440.jpg')"
+                                            />
+                                        </t>
+                                        <t t-else="">
+                                            <a href="#" class="promo-img mb-4"
+                                               t-attf-style="background-image: url('/web/binary/image?model=ir.attachment&amp;field=datas&amp;id={{t.photo_ids[0].id}}');"></a>
+                                        </t>
+
                                         <div class="text text-center">
                                             <h2>
                                                 <t t-esc="t.name"/>
@@ -2912,9 +2920,15 @@
                                                         <div class="post-meta">
                                                             <span>Places (<t t-esc="len(t.place_ids)"/>)
                                                             </span>
+                                                            <span>Количество мест для посещения -
+                                                                <t t-esc="len(t.place_ids)"/>
+                                                            </span>
                                                         </div>
                                                         <div class="post-meta">
                                                             <span>Services (<t t-esc="len(t.service_ids)"/>)
+                                                            </span>
+                                                            <span>Количество сервисов -
+                                                                <t t-esc="len(t.service_ids)"/>
                                                             </span>
                                                         </div>
                                                         <p class="star-rate">
@@ -3292,135 +3306,135 @@
                         <h3 class="my-3 mt-5 text-center">Сгенерировать тур по Алмате</h3>
                         <div class="row my-5">
                             <div class="col-md-7 my-2">
-<!--                                <div class="card mb-3">-->
-<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
-<!--                                        <span class="lead">-->
-<!--                                            <strong style="font-weight: bolder; font-size: 25px;">Термальные-->
-<!--                                                источники. База отдыха «Мираж»-->
-<!--                                            </strong>-->
-<!--                                        </span>-->
-<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-body">-->
-<!--                                        <span class="lead">Температура воды в бассейнах 36-40 °С.-->
-<!--                                            Вода на всех базах отдыха – минеральная, обладает лечебными свойствами.-->
-<!--                                            Химические элементы, обнаруженные в водах источников, помогают при лечении-->
-<!--                                            многих заболеваний, среди которых кожные заболевания, язвы, артроз,-->
-<!--                                            остеохондроз, отложения солей, переломы, гастрит, холецистит, панкреатит;-->
-<!--                                            пиелонефрит, гломерулонефрит, камни; инфаркт, гипотония; заболевания половой-->
-<!--                                            системы; бессонница, хроническая усталость, депрессия.-->
-<!--                                        </span>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-footer p-3">-->
-<!--                                        <div class="float-left">-->
-<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
-<!--                                                700$-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                        <div class="float-right">-->
-<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
-<!--                                                Перейти &#187;-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <!--                                <div class="card mb-3">-->
+                                <!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+                                <!--                                        <span class="lead">-->
+                                <!--                                            <strong style="font-weight: bolder; font-size: 25px;">Термальные-->
+                                <!--                                                источники. База отдыха «Мираж»-->
+                                <!--                                            </strong>-->
+                                <!--                                        </span>-->
+                                <!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-body">-->
+                                <!--                                        <span class="lead">Температура воды в бассейнах 36-40 °С.-->
+                                <!--                                            Вода на всех базах отдыха – минеральная, обладает лечебными свойствами.-->
+                                <!--                                            Химические элементы, обнаруженные в водах источников, помогают при лечении-->
+                                <!--                                            многих заболеваний, среди которых кожные заболевания, язвы, артроз,-->
+                                <!--                                            остеохондроз, отложения солей, переломы, гастрит, холецистит, панкреатит;-->
+                                <!--                                            пиелонефрит, гломерулонефрит, камни; инфаркт, гипотония; заболевания половой-->
+                                <!--                                            системы; бессонница, хроническая усталость, депрессия.-->
+                                <!--                                        </span>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-footer p-3">-->
+                                <!--                                        <div class="float-left">-->
+                                <!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+                                <!--                                                700$-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                        <div class="float-right">-->
+                                <!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+                                <!--                                                Перейти &#187;-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
 
-<!--                                <div class="card mb-3">-->
-<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
-<!--                                        <span class="lead">-->
-<!--                                            <strong style="font-weight: bolder; font-size: 25px;">Долина зайцев</strong>-->
-<!--                                        </span>-->
-<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-body">-->
-<!--                                        <span class="lead">Переезд к каньону Лунный ландшафт (долина зайцев)</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-footer p-3">-->
-<!--                                        <div class="float-left">-->
-<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
-<!--                                                400$-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                        <div class="float-right">-->
-<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
-<!--                                                Перейти &#187;-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <!--                                <div class="card mb-3">-->
+                                <!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+                                <!--                                        <span class="lead">-->
+                                <!--                                            <strong style="font-weight: bolder; font-size: 25px;">Долина зайцев</strong>-->
+                                <!--                                        </span>-->
+                                <!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-body">-->
+                                <!--                                        <span class="lead">Переезд к каньону Лунный ландшафт (долина зайцев)</span>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-footer p-3">-->
+                                <!--                                        <div class="float-left">-->
+                                <!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+                                <!--                                                400$-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                        <div class="float-right">-->
+                                <!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+                                <!--                                                Перейти &#187;-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
 
-<!--                                <div class="card mb-3">-->
-<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
-<!--                                        <span class="lead">-->
-<!--                                            <b style="font-weight: bolder; font-size: 25px;">Темерлик</b>-->
-<!--                                        </span>-->
-<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-body">-->
-<!--                                        <span class="lead">Экскурсия по каньону Темерлик.</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-footer p-3">-->
-<!--                                        <div class="float-left">-->
-<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
-<!--                                                300$-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                        <div class="float-right">-->
-<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
-<!--                                                Перейти &#187;-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <!--                                <div class="card mb-3">-->
+                                <!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+                                <!--                                        <span class="lead">-->
+                                <!--                                            <b style="font-weight: bolder; font-size: 25px;">Темерлик</b>-->
+                                <!--                                        </span>-->
+                                <!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-body">-->
+                                <!--                                        <span class="lead">Экскурсия по каньону Темерлик.</span>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-footer p-3">-->
+                                <!--                                        <div class="float-left">-->
+                                <!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+                                <!--                                                300$-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                        <div class="float-right">-->
+                                <!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+                                <!--                                                Перейти &#187;-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
 
-<!--                                <div class="card mb-3">-->
-<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
-<!--                                        <span class="lead">-->
-<!--                                            <b style="font-weight: bolder; font-size: 25px;">Обед</b>-->
-<!--                                        </span>-->
-<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-body">-->
-<!--                                        <span class="lead">Обед на берегу реки.</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-footer p-3">-->
-<!--                                        <div class="float-left">-->
-<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
-<!--                                                50$-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                        <div class="float-right">-->
-<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
-<!--                                                Перейти &#187;-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <!--                                <div class="card mb-3">-->
+                                <!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+                                <!--                                        <span class="lead">-->
+                                <!--                                            <b style="font-weight: bolder; font-size: 25px;">Обед</b>-->
+                                <!--                                        </span>-->
+                                <!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-body">-->
+                                <!--                                        <span class="lead">Обед на берегу реки.</span>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-footer p-3">-->
+                                <!--                                        <div class="float-left">-->
+                                <!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+                                <!--                                                50$-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                        <div class="float-right">-->
+                                <!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+                                <!--                                                Перейти &#187;-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
 
-<!--                                <div class="card mb-3">-->
-<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
-<!--                                        <span class="lead">-->
-<!--                                            <b style="font-weight: bolder; font-size: 25px;">Музей «Золотого человека»-->
-<!--                                            </b>-->
-<!--                                        </span>-->
-<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-body">-->
-<!--                                        <span class="lead">Экскурсия в музей «Золотого человека» осмотр курганов.</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-footer p-3">-->
-<!--                                        <div class="float-left">-->
-<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
-<!--                                                20$-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                        <div class="float-right">-->
-<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
-<!--                                                Перейти &#187;-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <!--                                <div class="card mb-3">-->
+                                <!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+                                <!--                                        <span class="lead">-->
+                                <!--                                            <b style="font-weight: bolder; font-size: 25px;">Музей «Золотого человека»-->
+                                <!--                                            </b>-->
+                                <!--                                        </span>-->
+                                <!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-body">-->
+                                <!--                                        <span class="lead">Экскурсия в музей «Золотого человека» осмотр курганов.</span>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-footer p-3">-->
+                                <!--                                        <div class="float-left">-->
+                                <!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+                                <!--                                                20$-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                        <div class="float-right">-->
+                                <!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+                                <!--                                                Перейти &#187;-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
 
                                 <div class="card mb-3">
                                     <div class="card-header p-3 d-flex align-items-center justify-content-between">
@@ -3447,63 +3461,63 @@
                                     </div>
                                 </div>
 
-<!--                                <div class="card mb-3">-->
-<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
-<!--                                        <span class="lead">-->
-<!--                                            <strong style="font-weight: bolder; font-size: 25px;">Куртогай</strong>-->
-<!--                                        </span>-->
-<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-body">-->
-<!--                                        <span class="lead">Переезд на смотровую площадку каньона Куртогай, осмотр, фото-->
-<!--                                            каньона-->
-<!--                                        </span>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-footer p-3">-->
-<!--                                        <div class="float-left">-->
-<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
-<!--                                                0$-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                        <div class="float-right">-->
-<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
-<!--                                                Перейти &#187;-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <!--                                <div class="card mb-3">-->
+                                <!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+                                <!--                                        <span class="lead">-->
+                                <!--                                            <strong style="font-weight: bolder; font-size: 25px;">Куртогай</strong>-->
+                                <!--                                        </span>-->
+                                <!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-body">-->
+                                <!--                                        <span class="lead">Переезд на смотровую площадку каньона Куртогай, осмотр, фото-->
+                                <!--                                            каньона-->
+                                <!--                                        </span>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-footer p-3">-->
+                                <!--                                        <div class="float-left">-->
+                                <!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+                                <!--                                                0$-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                        <div class="float-right">-->
+                                <!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+                                <!--                                                Перейти &#187;-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
 
-<!--                                <div class="card mb-3">-->
-<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
-<!--                                        <span class="lead">-->
-<!--                                            <strong style="font-weight: bolder; font-size: 25px;">Пешая экскурсия на-->
-<!--                                                водопад «Медвежий».-->
-<!--                                            </strong>-->
-<!--                                        </span>-->
-<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-body">-->
-<!--                                        <span class="lead">Водопад Медвежий - высота падения 40 м. Это самый-->
-<!--                                            легкодоступный и приятный водопад, возле него отдыхает много туристов.-->
-<!--                                            Тургенское ущелье уходит в глубь на 44 км. до огромного плато Ассы (2560-->
-<!--                                            м.). В древности здесь проходили караваны из Европы на восток - в Китай и-->
-<!--                                            Индию. Тургенское ущелье славится водопадами и реликтовыми Чин-Тургенскими-->
-<!--                                            моховыми ельниками, произрастающими на вечной мерзлоте.-->
-<!--                                        </span>-->
-<!--                                    </div>-->
-<!--                                    <div class="card-footer p-3">-->
-<!--                                        <div class="float-left">-->
-<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
-<!--                                                0$-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                        <div class="float-right">-->
-<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
-<!--                                                Перейти &#187;-->
-<!--                                            </btn>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <!--                                <div class="card mb-3">-->
+                                <!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+                                <!--                                        <span class="lead">-->
+                                <!--                                            <strong style="font-weight: bolder; font-size: 25px;">Пешая экскурсия на-->
+                                <!--                                                водопад «Медвежий».-->
+                                <!--                                            </strong>-->
+                                <!--                                        </span>-->
+                                <!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-body">-->
+                                <!--                                        <span class="lead">Водопад Медвежий - высота падения 40 м. Это самый-->
+                                <!--                                            легкодоступный и приятный водопад, возле него отдыхает много туристов.-->
+                                <!--                                            Тургенское ущелье уходит в глубь на 44 км. до огромного плато Ассы (2560-->
+                                <!--                                            м.). В древности здесь проходили караваны из Европы на восток - в Китай и-->
+                                <!--                                            Индию. Тургенское ущелье славится водопадами и реликтовыми Чин-Тургенскими-->
+                                <!--                                            моховыми ельниками, произрастающими на вечной мерзлоте.-->
+                                <!--                                        </span>-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="card-footer p-3">-->
+                                <!--                                        <div class="float-left">-->
+                                <!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+                                <!--                                                0$-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                        <div class="float-right">-->
+                                <!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+                                <!--                                                Перейти &#187;-->
+                                <!--                                            </btn>-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
                             </div>
                             <div class="col-md-4 offset-md-1 my-2">
                                 <div class="card mb-3">
@@ -3536,7 +3550,9 @@
                                         <span class="float-right overall_budget">0$</span>
                                     </div>
                                     <div class="card-footer">
-                                        <button class="btn btn-success float-right" style="border-radius: 10px;">Выбрать этот тур</button>
+                                        <button class="btn btn-success float-right" style="border-radius: 10px;">Выбрать
+                                            этот тур
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -3547,6 +3563,289 @@
 
                     <t t-call="ketchup.bottom"/>
 
+                </body>
+            </html>
+        </template>
+        <template id="create_tour">
+            <html lang="en">
+                <t t-call="ketchup.head"/>
+                <body>
+                    <t t-call="ketchup.navbar"/>
+
+                    <section class="home-slider owl-carousel">
+                        <div class="slider-item" style="background-image: url('/ketchup/static/images/bg_2.jpg');"
+                             data-stellar-background-ratio="0.5">
+                            <div class="overlay"></div>
+                            <div class="container">
+                                <div class="row slider-text align-items-center">
+                                    <div class="col-md-7 col-sm-12 ftco-animate">
+                                        <p class="breadcrumbs">
+                                            <span class="mr-2">
+                                                <a href="/index">Home</a>
+                                            </span>
+                                            <span>Tour</span>
+                                        </p>
+                                        <h1 class="mb-3">Tours Destination</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- END slider -->
+
+                    <section class="ftco-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <t t-foreach="tours" t-as="t">
+                                            <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
+                                                <a href="#" class="block-5"
+                                                   style="background-image: url('/ketchup/static/images/tour-1.jpg');">
+                                                    <div class="text">
+                                                        <span class="price"><t t-esc="t.total_price"/>Т
+                                                        </span>
+                                                        <h3 class="heading">
+                                                            <t t-esc="t.name"/>
+                                                        </h3>
+                                                        <div class="post-meta">
+                                                            <span>Ameeru Ahmed Magu Male’, Maldives</span>
+                                                        </div>
+                                                        <div class="post-meta">
+                                                            <span>Количество мест для посещения -
+                                                                <t t-esc="len(t.place_ids)"/>
+                                                            </span>
+                                                        </div>
+                                                        <div class="post-meta">
+                                                            <span>Количество сервисов -
+                                                                <t t-esc="len(t.service_ids)"/>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                                <!-- END -->
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <ul class="nav nav-tabs md-tabs" id="myTabMD" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="home-tab-md" data-toggle="tab"
+                                               href="#places-md" role="tab" aria-controls="places-md"
+                                               aria-selected="true">Places
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="profile-tab-md" data-toggle="tab"
+                                               href="#services-md" role="tab" aria-controls="services-md"
+                                               aria-selected="false">Services
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content card pt-5" id="myTabContentMD">
+                                        <div class="tab-pane fade show active" id="places-md" role="tabpanel"
+                                             aria-labelledby="places-tab-md">
+                                            <ul id="sortable1" class="list-group connectedSortable">
+                                                <li class="list-group-item">
+                                                    <div class="card mb-3">
+                                                        <div class="card-header p-3 d-flex align-items-center justify-content-between">
+                                                            <span class="lead">
+                                                                <strong style="font-weight: bolder; font-size: 25px;">
+                                                                    Лунный ландшафт
+                                                                </strong>
+                                                            </span>
+                                                            <btn class="btn btn-danger float-right"
+                                                                 style="border-radius: 50%;">X
+                                                            </btn>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <span class="lead">Небольшая прогулка, осмотр каньона
+                                                                (Лунного Ланшафта)
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer p-3">
+                                                            <div class="float-left">
+                                                                <btn class="btn btn-secondary h-100"
+                                                                     style="border-radius: 10px;">
+                                                                    0$
+                                                                </btn>
+                                                            </div>
+                                                            <div class="float-right">
+                                                                <btn class="btn btn-success h-100"
+                                                                     style="border-radius: 10px;">
+                                                                    Перейти &#187;
+                                                                </btn>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="card mb-3">
+                                                        <div class="card-header p-3 d-flex align-items-center justify-content-between">
+                                                            <span class="lead">
+                                                                <strong style="font-weight: bolder; font-size: 25px;">
+                                                                    Куртогай
+                                                                </strong>
+                                                            </span>
+                                                            <btn class="btn btn-danger float-right"
+                                                                 style="border-radius: 50%;">X
+                                                            </btn>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <span class="lead">Переезд на смотровую площадку каньона
+                                                                Куртогай, осмотр, фото
+                                                                каньона
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer p-3">
+                                                            <div class="float-left">
+                                                                <btn class="btn btn-secondary h-100"
+                                                                     style="border-radius: 10px;">
+                                                                    0$
+                                                                </btn>
+                                                            </div>
+                                                            <div class="float-right">
+                                                                <btn class="btn btn-success h-100"
+                                                                     style="border-radius: 10px;">
+                                                                    Перейти &#187;
+                                                                </btn>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="card mb-3">
+                                                        <div class="card-header p-3 d-flex align-items-center justify-content-between">
+                                                            <span class="lead">
+                                                                <strong style="font-weight: bolder; font-size: 25px;">
+                                                                    Пешая экскурсия на
+                                                                    водопад «Медвежий».
+                                                                </strong>
+                                                            </span>
+                                                            <btn class="btn btn-danger float-right"
+                                                                 style="border-radius: 50%;">X
+                                                            </btn>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <span class="lead">Водопад Медвежий - высота падения 40 м.
+                                                                Это самый
+                                                                легкодоступный и приятный водопад, возле него отдыхает
+                                                                много туристов.
+                                                                Тургенское ущелье уходит в глубь на 44 км. до огромного
+                                                                плато Ассы (2560
+                                                                м.). В древности здесь проходили караваны из Европы на
+                                                                восток - в Китай и
+                                                                Индию. Тургенское ущелье славится водопадами и
+                                                                реликтовыми Чин-Тургенскими
+                                                                моховыми ельниками, произрастающими на вечной мерзлоте.
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer p-3">
+                                                            <div class="float-left">
+                                                                <btn class="btn btn-secondary h-100"
+                                                                     style="border-radius: 10px;">
+                                                                    0$
+                                                                </btn>
+                                                            </div>
+                                                            <div class="float-right">
+                                                                <btn class="btn btn-success h-100"
+                                                                     style="border-radius: 10px;">
+                                                                    Перейти &#187;
+                                                                </btn>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane fade" id="services-md" role="tabpanel"
+                                             aria-labelledby="services-tab-md">
+                                            <ul id="sortable2" class="list-group connectedSortable">
+                                                <li class="list-group-item">
+                                                    <div class="card mb-3">
+                                                        <div class="card-header p-3 d-flex align-items-center justify-content-between">
+                                                            <span class="lead">
+                                                                <strong style="font-weight: bolder; font-size: 25px;">
+                                                                    Проживание
+                                                                </strong>
+                                                            </span>
+                                                            <btn class="btn btn-danger float-right"
+                                                                 style="border-radius: 50%;">X
+                                                            </btn>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <span class="lead">Проживание в одном из элитных отелей
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer p-3">
+                                                            <div class="float-left">
+                                                                <btn class="btn btn-secondary h-100"
+                                                                     style="border-radius: 10px;">
+                                                                    0$
+                                                                </btn>
+                                                            </div>
+                                                            <div class="float-right">
+                                                                <btn class="btn btn-success h-100"
+                                                                     style="border-radius: 10px;">
+                                                                    Перейти &#187;
+                                                                </btn>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="card mb-3">
+                                                        <div class="card-header p-3 d-flex align-items-center justify-content-between">
+                                                            <span class="lead">
+                                                                <strong style="font-weight: bolder; font-size: 25px;">
+                                                                    Питание
+                                                                </strong>
+                                                            </span>
+                                                            <btn class="btn btn-danger float-right"
+                                                                 style="border-radius: 50%;">X
+                                                            </btn>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <span class="lead">3-х разовое питание с большим выбором блюд
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer p-3">
+                                                            <div class="float-left">
+                                                                <btn class="btn btn-secondary h-100"
+                                                                     style="border-radius: 10px;">
+                                                                    0$
+                                                                </btn>
+                                                            </div>
+                                                            <div class="float-right">
+                                                                <btn class="btn btn-success h-100"
+                                                                     style="border-radius: 10px;">
+                                                                    Перейти &#187;
+                                                                </btn>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="w-300"></div>
+                                <div class="col">
+                                    <ul id="sortable3" class="list-group connectedSortable">
+                                        <li class="list-group-item disabled active">Создание своего тура</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </body>
             </html>
         </template>
