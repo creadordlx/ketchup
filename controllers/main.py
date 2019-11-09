@@ -79,3 +79,7 @@ class Main(http.Controller):
             "services": services,
             "places": places
         })
+
+    @http.route('/js_mod', auth='public')
+    def js_mod(self, **kw):
+        return request.render("ketchup.js_mod", {})

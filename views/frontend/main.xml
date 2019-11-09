@@ -1286,7 +1286,7 @@
                                                         </div>
                                                         <div class="col-sm-12 group mb-3">
                                                             <input type="submit" class="search-submit btn btn-primary"
-                                                                   value="Find Flights"/>
+                                                                   value="Find Tours"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1501,7 +1501,8 @@
                                                    t-attf-style="background-image: url('/web/binary/image?model=ir.attachment&amp;field=datas&amp;id={{o.photo_ids[0].id}}');">
                                                     <div class="text">
                                                         <div class="float-right border-radius">
-                                                            <img class="rounded-circle" style="width:75px; height:75px; color:blue;"
+                                                            <img class="rounded-circle"
+                                                                 style="width:75px; height:75px; color:blue;"
                                                                  src="/ketchup/static/images/360.png"/>
                                                         </div>
                                                         <span class="price"><t t-esc="o.price"/>T
@@ -1739,7 +1740,7 @@
                                                         </div>
                                                         <div class="col-sm-12 group mb-3">
                                                             <input type="submit" class="search-submit btn btn-primary"
-                                                                   value="Find Flights"/>
+                                                                   value="Find Tours"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1924,7 +1925,7 @@
                                                         </div>
                                                     </div>
                                                     <input type="submit" class="search-submit btn btn-primary"
-                                                           value="Find Flights"/>
+                                                           value="Find Tours"/>
                                                 </form>
                                             </div>
                                         </div>
@@ -3186,7 +3187,7 @@
                                                         </div>
                                                         <div class="col-sm-12 group mb-3">
                                                             <input type="submit" class="search-submit btn btn-primary"
-                                                                   value="Find Flights"/>
+                                                                   value="Find Tours"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3252,6 +3253,295 @@
                             </div>
                         </div>
                     </section>
+
+                    <t t-call="ketchup.footer"/>
+
+                    <t t-call="ketchup.bottom"/>
+
+                </body>
+            </html>
+        </template>
+        <template id="js_mod">
+            <html lang="en">
+                <t t-call="ketchup.head"/>
+                <body>
+
+                    <t t-call="ketchup.navbar"/>
+
+                    <section class="home-slider owl-carousel">
+                        <div class="slider-item" style="background-image: url('/ketchup/static/images/bg_3.jpg');"
+                             data-stellar-background-ratio="0.5">
+                            <div class="overlay"></div>
+                            <div class="container">
+                                <div class="row slider-text align-items-center">
+                                    <div class="col-md-7 col-sm-12 ftco-animate">
+                                        <p class="breadcrumbs">
+                                            <span class="mr-2">
+                                                <a href="/index">Home</a>
+                                            </span>
+                                            <span>Autochoose</span>
+                                        </p>
+                                        <h1 class="mb-3">Autochoose</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="container">
+                        <h3 class="my-3 mt-5 text-center">Сгенерировать тур по Алмате</h3>
+                        <div class="row my-5">
+                            <div class="col-md-7 my-2">
+<!--                                <div class="card mb-3">-->
+<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+<!--                                        <span class="lead">-->
+<!--                                            <strong style="font-weight: bolder; font-size: 25px;">Термальные-->
+<!--                                                источники. База отдыха «Мираж»-->
+<!--                                            </strong>-->
+<!--                                        </span>-->
+<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-body">-->
+<!--                                        <span class="lead">Температура воды в бассейнах 36-40 °С.-->
+<!--                                            Вода на всех базах отдыха – минеральная, обладает лечебными свойствами.-->
+<!--                                            Химические элементы, обнаруженные в водах источников, помогают при лечении-->
+<!--                                            многих заболеваний, среди которых кожные заболевания, язвы, артроз,-->
+<!--                                            остеохондроз, отложения солей, переломы, гастрит, холецистит, панкреатит;-->
+<!--                                            пиелонефрит, гломерулонефрит, камни; инфаркт, гипотония; заболевания половой-->
+<!--                                            системы; бессонница, хроническая усталость, депрессия.-->
+<!--                                        </span>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-footer p-3">-->
+<!--                                        <div class="float-left">-->
+<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+<!--                                                700$-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                        <div class="float-right">-->
+<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+<!--                                                Перейти &#187;-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="card mb-3">-->
+<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+<!--                                        <span class="lead">-->
+<!--                                            <strong style="font-weight: bolder; font-size: 25px;">Долина зайцев</strong>-->
+<!--                                        </span>-->
+<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-body">-->
+<!--                                        <span class="lead">Переезд к каньону Лунный ландшафт (долина зайцев)</span>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-footer p-3">-->
+<!--                                        <div class="float-left">-->
+<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+<!--                                                400$-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                        <div class="float-right">-->
+<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+<!--                                                Перейти &#187;-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="card mb-3">-->
+<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+<!--                                        <span class="lead">-->
+<!--                                            <b style="font-weight: bolder; font-size: 25px;">Темерлик</b>-->
+<!--                                        </span>-->
+<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-body">-->
+<!--                                        <span class="lead">Экскурсия по каньону Темерлик.</span>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-footer p-3">-->
+<!--                                        <div class="float-left">-->
+<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+<!--                                                300$-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                        <div class="float-right">-->
+<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+<!--                                                Перейти &#187;-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="card mb-3">-->
+<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+<!--                                        <span class="lead">-->
+<!--                                            <b style="font-weight: bolder; font-size: 25px;">Обед</b>-->
+<!--                                        </span>-->
+<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-body">-->
+<!--                                        <span class="lead">Обед на берегу реки.</span>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-footer p-3">-->
+<!--                                        <div class="float-left">-->
+<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+<!--                                                50$-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                        <div class="float-right">-->
+<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+<!--                                                Перейти &#187;-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="card mb-3">-->
+<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+<!--                                        <span class="lead">-->
+<!--                                            <b style="font-weight: bolder; font-size: 25px;">Музей «Золотого человека»-->
+<!--                                            </b>-->
+<!--                                        </span>-->
+<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-body">-->
+<!--                                        <span class="lead">Экскурсия в музей «Золотого человека» осмотр курганов.</span>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-footer p-3">-->
+<!--                                        <div class="float-left">-->
+<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+<!--                                                20$-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                        <div class="float-right">-->
+<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+<!--                                                Перейти &#187;-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+                                <div class="card mb-3">
+                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">
+                                        <span class="lead">
+                                            <strong style="font-weight: bolder; font-size: 25px;">Лунный ландшафт
+                                            </strong>
+                                        </span>
+                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>
+                                    </div>
+                                    <div class="card-body">
+                                        <span class="lead">Небольшая прогулка, осмотр каньона (Лунного Ланшафта)</span>
+                                    </div>
+                                    <div class="card-footer p-3">
+                                        <div class="float-left">
+                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">
+                                                0$
+                                            </btn>
+                                        </div>
+                                        <div class="float-right">
+                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">
+                                                Перейти &#187;
+                                            </btn>
+                                        </div>
+                                    </div>
+                                </div>
+
+<!--                                <div class="card mb-3">-->
+<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+<!--                                        <span class="lead">-->
+<!--                                            <strong style="font-weight: bolder; font-size: 25px;">Куртогай</strong>-->
+<!--                                        </span>-->
+<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-body">-->
+<!--                                        <span class="lead">Переезд на смотровую площадку каньона Куртогай, осмотр, фото-->
+<!--                                            каньона-->
+<!--                                        </span>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-footer p-3">-->
+<!--                                        <div class="float-left">-->
+<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+<!--                                                0$-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                        <div class="float-right">-->
+<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+<!--                                                Перейти &#187;-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="card mb-3">-->
+<!--                                    <div class="card-header p-3 d-flex align-items-center justify-content-between">-->
+<!--                                        <span class="lead">-->
+<!--                                            <strong style="font-weight: bolder; font-size: 25px;">Пешая экскурсия на-->
+<!--                                                водопад «Медвежий».-->
+<!--                                            </strong>-->
+<!--                                        </span>-->
+<!--                                        <btn class="btn btn-danger float-right" style="border-radius: 50%;">X</btn>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-body">-->
+<!--                                        <span class="lead">Водопад Медвежий - высота падения 40 м. Это самый-->
+<!--                                            легкодоступный и приятный водопад, возле него отдыхает много туристов.-->
+<!--                                            Тургенское ущелье уходит в глубь на 44 км. до огромного плато Ассы (2560-->
+<!--                                            м.). В древности здесь проходили караваны из Европы на восток - в Китай и-->
+<!--                                            Индию. Тургенское ущелье славится водопадами и реликтовыми Чин-Тургенскими-->
+<!--                                            моховыми ельниками, произрастающими на вечной мерзлоте.-->
+<!--                                        </span>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-footer p-3">-->
+<!--                                        <div class="float-left">-->
+<!--                                            <btn class="btn btn-secondary h-100" style="border-radius: 10px;">-->
+<!--                                                0$-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                        <div class="float-right">-->
+<!--                                            <btn class="btn btn-success h-100" style="border-radius: 10px;">-->
+<!--                                                Перейти &#187;-->
+<!--                                            </btn>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                            </div>
+                            <div class="col-md-4 offset-md-1 my-2">
+                                <div class="card mb-3">
+                                    <div class="card-header">
+                                        Бюджет
+                                    </div>
+                                    <div class="card-body d-flex justify-content-between">
+                                        <input class="form-control" type="number"/>
+                                        <button class="btn btn-primary">
+                                            Применить
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3">
+                                    <div class="card-header">
+                                        Возраст
+                                    </div>
+                                    <div class="card-body d-flex justify-content-between">
+                                        <input class="form-control" type="number"/>
+                                        <button class="btn btn-primary">
+                                            Применить
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body d-flex justify-content-between">
+                                        <span>Общее</span>
+                                        <span class="float-right overall_budget">0$</span>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button class="btn btn-success float-right" style="border-radius: 10px;">Выбрать этот тур</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <t t-call="ketchup.footer"/>
 
