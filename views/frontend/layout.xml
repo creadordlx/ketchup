@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <template id="footer">
+            <footer class="footer text-faded text-center py-5">
+                <div class="container">
+                    <p class="m-0 small">Copyright (c) Your Website 2019</p>
+                </div>
+            </footer>
+        </template>
+
+        <template id="head">
+            <head>
+                <meta charset="utf-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+                <meta name="description" content=""/>
+                <meta name="author" content=""/>
+                <title>Tourismo -
+                    <t t-esc="title"/>
+                </title>
+                <link href="/ketchup/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+                      rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"/>
+                <link href="/ketchup/static/css/business-casual.min.css" rel="stylesheet"/>
+            </head>
+        </template>
+
+        <template id="navbar">
+            <nav class="navbar navbar-expand-lg navbar-dark py-3 my-5" id="mainNav">
+                <div class="container">
+                    <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">
+                        Start Bootstrap
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav mx-auto">
+                            <t t-if="title == 'Главная'">
+                                <li class="nav-item active px-lg-4">
+                                    <a class="nav-link text-uppercase text-expanded" href="/main">Главная
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                            </t>
+                            <t t-else="">
+                                <li class="nav-item px-lg-4">
+                                    <a class="nav-link text-uppercase text-expanded" href="/main">Главная
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                            </t>
+
+                            <t t-if="title == 'О компании'">
+                                <li class="nav-item active px-lg-4">
+                                    <a class="nav-link text-uppercase text-expanded" href="/about">О компании</a>
+                                </li>
+                            </t>
+                            <t t-else="">
+                                <li class="nav-item px-lg-4">
+                                    <a class="nav-link text-uppercase text-expanded" href="/about">О компании</a>
+                                </li>
+                            </t>
+
+                            <t t-if="title == 'Места'">
+                                <li class="nav-item active px-lg-4">
+                                    <a class="nav-link text-uppercase text-expanded" href="/products">Места
+                                    </a>
+                                </li>
+                            </t>
+                            <t t-else="">
+                                <li class="nav-item px-lg-4">
+                                    <a class="nav-link text-uppercase text-expanded" href="/products">Места
+                                    </a>
+                                </li>
+                            </t>
+
+                            <t t-if="title == 'Корзина'">
+                                <li class="nav-item active px-lg-4">
+                                    <a class="nav-link text-uppercase text-expanded" href="/store">Корзина
+                                    </a>
+                                </li>
+                            </t>
+                            <t t-else="">
+                                <li class="nav-item px-lg-4">
+                                    <a class="nav-link text-uppercase text-expanded" href="/store">Корзина
+                                    </a>
+                                </li>
+                            </t>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </template>
+
+        <template id="bottom">
+            <script src="/ketchup/static/vendor/jquery/jquery.min.js"></script>
+            <script src="/ketchup/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        </template>
+    </data>
+</odoo>
