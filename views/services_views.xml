@@ -10,18 +10,18 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="ketchup.services_form">
-            <field name="name">ketchup.services.form</field>
-            <field name="model">ketchup.services</field>
-            <field name="arch" type="xml">
-                <form>
-                    <sheet>
-                        <div class="oe_title">
-                            <label for="name" string="Название" class="oe_edit_only"/>
-                            <h1>
-                                <field name="name" placeholder="Название"/>
-                            </h1>
-                        </div>
+<!--        <record model="ir.ui.view" id="ketchup.services_form">-->
+<!--            <field name="name">ketchup.services.form</field>-->
+<!--            <field name="model">ketchup.services</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form>-->
+<!--                    <sheet>-->
+<!--                        <div class="oe_title">-->
+<!--                            <label for="name" string="Название" class="oe_edit_only"/>-->
+<!--                            <h1>-->
+<!--                                <field name="name" placeholder="Название"/>-->
+<!--                            </h1>-->
+<!--                        </div>-->
 <!--                        <group>-->
 <!--                            <field name="status" readonly="True"/>-->
 <!--                            <field name="description"/>-->
@@ -39,13 +39,13 @@
 <!--                            <field name="status_multiplier" invisible="True"/>-->
 <!--                            <field name="status_percentage" readonly="1"/>-->
 <!--                        </group>-->
-                    </sheet>
-                    <div class="oe_chatter">
+<!--                    </sheet>-->
+<!--                    <div class="oe_chatter">-->
 
-                    </div>
-                </form>
-            </field>
-        </record>
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
 
         <record model="ir.actions.act_window" id="ketchup.action_services_list">
             <field name="name">Services</field>
