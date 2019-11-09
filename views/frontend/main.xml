@@ -2504,13 +2504,11 @@
                                                             </span>
                                                         </div>
                                                         <div class="post-meta">
-                                                            <span>Количество мест для посещения -
-                                                                <t t-esc="len(t.place_ids)"/>
+                                                            <span>Places (<t t-esc="len(t.place_ids)"/>)
                                                             </span>
                                                         </div>
                                                         <div class="post-meta">
-                                                            <span>Количество сервисов -
-                                                                <t t-esc="len(t.service_ids)"/>
+                                                            <span>Services (<t t-esc="len(t.service_ids)"/>)
                                                             </span>
                                                         </div>
                                                         <p class="star-rate">
