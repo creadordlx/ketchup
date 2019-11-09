@@ -4,6 +4,18 @@ from odoo.http import request
 
 
 class Main(http.Controller):
+    @http.route('/index', auth='public')
+    def index(self, **kw):
+        return request.render("ketchup.index", {
+            "title": "Главная"
+        })
+
+    @http.route('/services', auth='public')
+    def services(self, **kw):
+        return request.render("ketchup.services", {
+            "title": "Сервисы"
+        })
+
     @http.route('/about', auth='public')
     def about(self, **kw):
         return request.render("ketchup.about", {
@@ -32,18 +44,6 @@ class Main(http.Controller):
     def hotels(self, **kw):
         return request.render("ketchup.hotels", {
             "title": "Отели"
-        })
-
-    @http.route('/index', auth='public')
-    def index(self, **kw):
-        return request.render("ketchup.index", {
-            "title": "Главная"
-        })
-
-    @http.route('/services', auth='public')
-    def services(self, **kw):
-        return request.render("ketchup.services", {
-            "title": "Сервисы"
         })
 
     @http.route('/tours', auth='public')
