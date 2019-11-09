@@ -10,20 +10,44 @@ class Main(http.Controller):
             "title": "О компании"
         })
 
-    @http.route('/main', auth='public')
-    def main(self, **kw):
-        return request.render("ketchup.main", {
+    @http.route('/blog', auth='public')
+    def blog(self, **kw):
+        return request.render("ketchup.blog", {
+            "title": "Блог"
+        })
+
+    @http.route('/blog_single', auth='public')
+    def blog_single(self, **kw):
+        return request.render("ketchup.blog_single", {
+            "title": "Блог"
+        })
+
+    @http.route('/contact', auth='public')
+    def contact(self, **kw):
+        return request.render("ketchup.contact", {
+            "title": "Связаться"
+        })
+
+    @http.route('/hotels', auth='public')
+    def hotels(self, **kw):
+        return request.render("ketchup.hotels", {
+            "title": "Отели"
+        })
+
+    @http.route('/index', auth='public')
+    def index(self, **kw):
+        return request.render("ketchup.index", {
             "title": "Главная"
         })
 
-    @http.route('/products', auth='public')
-    def products(self, **kw):
-        return request.render("ketchup.products", {
-            "title": "Места"
+    @http.route('/services', auth='public')
+    def services(self, **kw):
+        return request.render("ketchup.services", {
+            "title": "Сервисы"
         })
 
-    @http.route('/store', auth='public')
-    def store(self, **kw):
-        return request.render("ketchup.store", {
-            "title": "Корзина"
+    @http.route('/tours', auth='public')
+    def tours(self, **kw):
+        return request.render("ketchup.tours", {
+            "title": "Туры"
         })
