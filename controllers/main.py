@@ -48,6 +48,8 @@ class Main(http.Controller):
 
     @http.route('/tours', auth='public')
     def tours(self, **kw):
+        tours = request.env["ketchup.tours"].search([])
         return request.render("ketchup.tours", {
-            "title": "Туры"
+            "title": "Туры",
+            "tours": tours
         })

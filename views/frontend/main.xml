@@ -1038,7 +1038,8 @@
                                                       placeholder="Message"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5"/>
+                                            <input type="submit" value="Send Message"
+                                                   class="btn btn-primary py-3 px-5"/>
                                         </div>
                                     </form>
                                 </div>
@@ -2520,182 +2521,212 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="row">
-                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                                            <a href="#" class="block-5"
-                                               style="background-image: url('/ketchup/static/images/tour-1.jpg');">
-                                                <div class="text">
-                                                    <span class="price">$399</span>
-                                                    <h3 class="heading">Group Tour in Maldives</h3>
-                                                    <div class="post-meta">
-                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
+                                        <t t-foreach="tours" t-as="t">
+                                            <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
+                                                <a href="#" class="block-5"
+                                                   style="background-image: url('/ketchup/static/images/tour-1.jpg');">
+                                                    <div class="text">
+                                                        <span class="price"><t t-esc="t.total_price"/>Т</span>
+                                                        <h3 class="heading"><t t-esc="t.name"/></h3>
+                                                        <div class="post-meta">
+                                                            <span>Ameeru Ahmed Magu Male’, Maldives</span>
+                                                        </div>
+                                                        <div class="post-meta">
+                                                            <span>Количество мест для посещения - <t t-esc="len(t.place_ids)"/></span>
+                                                        </div>
+                                                        <div class="post-meta">
+                                                            <span>Количество сервисов - <t t-esc="len(t.service_ids)"/></span>
+                                                        </div>
+                                                        <p class="star-rate">
+                                                            <span class="icon-star"></span>
+                                                            <span class="icon-star"></span>
+                                                            <span
+                                                                    class="icon-star"></span>
+                                                            <span class="icon-star"></span>
+                                                            <span
+                                                                    class="icon-star-half-full"></span>
+                                                            <span>500 reviews</span>
+                                                        </p>
                                                     </div>
-                                                    <p class="star-rate">
-                                                        <span class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star-half-full"></span>
-                                                        <span>500 reviews</span>
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                                            <a href="#" class="block-5"
-                                               style="background-image: url('/ketchup/static/images/tour-2.jpg');">
-                                                <div class="text">
-                                                    <span class="price">$399</span>
-                                                    <h3 class="heading">Group Tour in Maldives</h3>
-                                                    <div class="post-meta">
-                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                                    </div>
-                                                    <p class="star-rate">
-                                                        <span class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star-half-full"></span>
-                                                        <span>500 reviews</span>
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                                            <a href="#" class="block-5"
-                                               style="background-image: url('/ketchup/static/images/tour-3.jpg');">
-                                                <div class="text">
-                                                    <span class="price">$399</span>
-                                                    <h3 class="heading">Group Tour in Maldives</h3>
-                                                    <div class="post-meta">
-                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                                    </div>
-                                                    <p class="star-rate">
-                                                        <span class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star-half-full"></span>
-                                                        <span>500 reviews</span>
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                                            <a href="#" class="block-5"
-                                               style="background-image: url('/ketchup/static/images/tour-4.jpg');">
-                                                <div class="text">
-                                                    <span class="price">$399</span>
-                                                    <h3 class="heading">Group Tour in Maldives</h3>
-                                                    <div class="post-meta">
-                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                                    </div>
-                                                    <p class="star-rate">
-                                                        <span class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star-half-full"></span>
-                                                        <span>500 reviews</span>
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                                            <a href="#" class="block-5"
-                                               style="background-image: url('/ketchup/static/images/tour-5.jpg');">
-                                                <div class="text">
-                                                    <span class="price">$399</span>
-                                                    <h3 class="heading">Group Tour in Maldives</h3>
-                                                    <div class="post-meta">
-                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                                    </div>
-                                                    <p class="star-rate">
-                                                        <span class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star-half-full"></span>
-                                                        <span>500 reviews</span>
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                                            <a href="#" class="block-5"
-                                               style="background-image: url('/ketchup/static/images/tour-6.jpg');">
-                                                <div class="text">
-                                                    <span class="price">$399</span>
-                                                    <h3 class="heading">Group Tour in Maldives</h3>
-                                                    <div class="post-meta">
-                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                                    </div>
-                                                    <p class="star-rate">
-                                                        <span class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star-half-full"></span>
-                                                        <span>500 reviews</span>
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                                            <a href="#" class="block-5"
-                                               style="background-image: url('/ketchup/static/images/tour-7.jpg');">
-                                                <div class="text">
-                                                    <span class="price">$399</span>
-                                                    <h3 class="heading">Group Tour in Maldives</h3>
-                                                    <div class="post-meta">
-                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                                    </div>
-                                                    <p class="star-rate">
-                                                        <span class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star-half-full"></span>
-                                                        <span>500 reviews</span>
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">
-                                            <a href="#" class="block-5"
-                                               style="background-image: url('/ketchup/static/images/tour-8.jpg');">
-                                                <div class="text">
-                                                    <span class="price">$399</span>
-                                                    <h3 class="heading">Group Tour in Maldives</h3>
-                                                    <div class="post-meta">
-                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>
-                                                    </div>
-                                                    <p class="star-rate">
-                                                        <span class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star"></span>
-                                                        <span class="icon-star"></span>
-                                                        <span
-                                                                class="icon-star-half-full"></span>
-                                                        <span>500 reviews</span>
-                                                    </p>
-                                                </div>
-                                            </a>
-                                        </div>
+                                                </a>
+                                            </div>
+                                        </t>
+<!--                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">-->
+<!--                                            <a href="#" class="block-5"-->
+<!--                                               style="background-image: url('/ketchup/static/images/tour-1.jpg');">-->
+<!--                                                <div class="text">-->
+<!--                                                    <span class="price">$399</span>-->
+<!--                                                    <h3 class="heading">Group Tour in Maldives</h3>-->
+<!--                                                    <div class="post-meta">-->
+<!--                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>-->
+<!--                                                    </div>-->
+<!--                                                    <p class="star-rate">-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star-half-full"></span>-->
+<!--                                                        <span>500 reviews</span>-->
+<!--                                                    </p>-->
+<!--                                                </div>-->
+<!--                                            </a>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">-->
+<!--                                            <a href="#" class="block-5"-->
+<!--                                               style="background-image: url('/ketchup/static/images/tour-2.jpg');">-->
+<!--                                                <div class="text">-->
+<!--                                                    <span class="price">$399</span>-->
+<!--                                                    <h3 class="heading">Group Tour in Maldives</h3>-->
+<!--                                                    <div class="post-meta">-->
+<!--                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>-->
+<!--                                                    </div>-->
+<!--                                                    <p class="star-rate">-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star-half-full"></span>-->
+<!--                                                        <span>500 reviews</span>-->
+<!--                                                    </p>-->
+<!--                                                </div>-->
+<!--                                            </a>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">-->
+<!--                                            <a href="#" class="block-5"-->
+<!--                                               style="background-image: url('/ketchup/static/images/tour-3.jpg');">-->
+<!--                                                <div class="text">-->
+<!--                                                    <span class="price">$399</span>-->
+<!--                                                    <h3 class="heading">Group Tour in Maldives</h3>-->
+<!--                                                    <div class="post-meta">-->
+<!--                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>-->
+<!--                                                    </div>-->
+<!--                                                    <p class="star-rate">-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star-half-full"></span>-->
+<!--                                                        <span>500 reviews</span>-->
+<!--                                                    </p>-->
+<!--                                                </div>-->
+<!--                                            </a>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">-->
+<!--                                            <a href="#" class="block-5"-->
+<!--                                               style="background-image: url('/ketchup/static/images/tour-4.jpg');">-->
+<!--                                                <div class="text">-->
+<!--                                                    <span class="price">$399</span>-->
+<!--                                                    <h3 class="heading">Group Tour in Maldives</h3>-->
+<!--                                                    <div class="post-meta">-->
+<!--                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>-->
+<!--                                                    </div>-->
+<!--                                                    <p class="star-rate">-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star-half-full"></span>-->
+<!--                                                        <span>500 reviews</span>-->
+<!--                                                    </p>-->
+<!--                                                </div>-->
+<!--                                            </a>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">-->
+<!--                                            <a href="#" class="block-5"-->
+<!--                                               style="background-image: url('/ketchup/static/images/tour-5.jpg');">-->
+<!--                                                <div class="text">-->
+<!--                                                    <span class="price">$399</span>-->
+<!--                                                    <h3 class="heading">Group Tour in Maldives</h3>-->
+<!--                                                    <div class="post-meta">-->
+<!--                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>-->
+<!--                                                    </div>-->
+<!--                                                    <p class="star-rate">-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star-half-full"></span>-->
+<!--                                                        <span>500 reviews</span>-->
+<!--                                                    </p>-->
+<!--                                                </div>-->
+<!--                                            </a>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">-->
+<!--                                            <a href="#" class="block-5"-->
+<!--                                               style="background-image: url('/ketchup/static/images/tour-6.jpg');">-->
+<!--                                                <div class="text">-->
+<!--                                                    <span class="price">$399</span>-->
+<!--                                                    <h3 class="heading">Group Tour in Maldives</h3>-->
+<!--                                                    <div class="post-meta">-->
+<!--                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>-->
+<!--                                                    </div>-->
+<!--                                                    <p class="star-rate">-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star-half-full"></span>-->
+<!--                                                        <span>500 reviews</span>-->
+<!--                                                    </p>-->
+<!--                                                </div>-->
+<!--                                            </a>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">-->
+<!--                                            <a href="#" class="block-5"-->
+<!--                                               style="background-image: url('/ketchup/static/images/tour-7.jpg');">-->
+<!--                                                <div class="text">-->
+<!--                                                    <span class="price">$399</span>-->
+<!--                                                    <h3 class="heading">Group Tour in Maldives</h3>-->
+<!--                                                    <div class="post-meta">-->
+<!--                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>-->
+<!--                                                    </div>-->
+<!--                                                    <p class="star-rate">-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star-half-full"></span>-->
+<!--                                                        <span>500 reviews</span>-->
+<!--                                                    </p>-->
+<!--                                                </div>-->
+<!--                                            </a>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6 col-lg-6 mb-4 ftco-animate">-->
+<!--                                            <a href="#" class="block-5"-->
+<!--                                               style="background-image: url('/ketchup/static/images/tour-8.jpg');">-->
+<!--                                                <div class="text">-->
+<!--                                                    <span class="price">$399</span>-->
+<!--                                                    <h3 class="heading">Group Tour in Maldives</h3>-->
+<!--                                                    <div class="post-meta">-->
+<!--                                                        <span>Ameeru Ahmed Magu Male’, Maldives</span>-->
+<!--                                                    </div>-->
+<!--                                                    <p class="star-rate">-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star"></span>-->
+<!--                                                        <span class="icon-star"></span>-->
+<!--                                                        <span-->
+<!--                                                                class="icon-star-half-full"></span>-->
+<!--                                                        <span>500 reviews</span>-->
+<!--                                                    </p>-->
+<!--                                                </div>-->
+<!--                                            </a>-->
+<!--                                        </div>-->
                                     </div>
                                     <div class="row mt-5">
                                         <div class="col text-center">
