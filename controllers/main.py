@@ -66,3 +66,16 @@ class Main(http.Controller):
             "title": "Tours",
             "tours": tours
         })
+
+    @http.route('/tour/<int:id>', auth='public')
+    def tour(self, id, **kw):
+        tour = request.env["ketchup.tours"].search([("id", "=", id)])
+        services = request.env["ketchup.services"].search([("id", "in", list(map(lambda x: x.id, tour.service_ids)))])
+        places = request.env["ketchup.places"].search([("id", "in", list(map(lambda x: x.id, tour.place_ids)))])
+        print(services)
+        return request.render("ketchup.tour_single", {
+            "title": "Tour",
+            "tour": tour,
+            "services": services,
+            "places": places
+        })
