@@ -8,6 +8,6 @@ class KetchupBlog(models.Model):
     name = fields.Char(string='name', size=128, required=True)
     place_id = fields.Many2one('ketchup.places', string='place_id')
     tour_id = fields.Many2one('ketchup.tours', string='tour_id')
-    photo_ids = fields.Many2many('ir.attachment', string='photo_ids')
+    photo_ids = fields.One2many('ir.attachment', 'blog_id', string='photo_ids')
 
     content = fields.Text(string='content')

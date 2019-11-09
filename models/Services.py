@@ -9,3 +9,5 @@ class KetchupServices(models.Model):
     content = fields.Text(string='content')
     price = fields.Integer(string='price', default=0)
     tour_ids = fields.Many2many('ketchup.tours', string='tour_ids')
+    description = fields.Text(string="Описание")
+    photo_ids = fields.One2many('ir.attachment', 'service_id', string='photo_ids')

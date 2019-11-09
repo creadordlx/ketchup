@@ -8,6 +8,8 @@ class KetchupPlaces(models.Model):
     name = fields.Char(string='name', size=128)
     price = fields.Integer(string='price', default=0)
     photo_ids = fields.One2many('ir.attachment', 'place_id', string='photo_ids')
+    description = fields.Text(string='Описание')
+    rating = fields.Float(string="rating")
 
     tour_ids = fields.Many2many('ketchup.tours', string='tour_ids')
     blog_id = fields.One2many('ketchup.blog', 'place_id', string='blog_id')
