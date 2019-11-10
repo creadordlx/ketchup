@@ -330,19 +330,19 @@
                                             <div class="text p-4">
                                                 <div class="meta">
                                                     <div>
-                                                        <a href="#">
+                                                        <a href="/blog_single">
                                                             <span t-field="b.create_date"/>
                                                         </a>
                                                     </div>
                                                     <div>
-                                                        <a href="#">
+                                                        <a href="/blog_single">
                                                             <span t-field="b.create_uid.name"/>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <h3 class="heading">
-                                                    <a href="#">
-                                                        <t t-esc="' '.join(b.content.split(' ')[:10])"/>
+                                                    <a href="/blog_single">
+                                                        <t t-esc="b.name"/>
                                                     </a>
                                                 </h3>
                                                 <p class="clearfix">
