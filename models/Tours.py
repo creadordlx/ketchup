@@ -5,15 +5,15 @@ class KetchupTours(models.Model):
     _name = "ketchup.tours"
     _description = "List of Tours"
 
-    name = fields.Char('name', size=128)
-    description = fields.Text('description')
-    rating = fields.Float('rating', default=0.0)
+    name = fields.Char('Название', size=128)
+    description = fields.Text('Описание')
+    rating = fields.Float('Рейтинг', default=0.0)
 
-    place_ids = fields.Many2many('ketchup.places', string='place_ids')
-    blog_ids = fields.One2many('ketchup.blog', 'tour_id', string='blog_id')
-    service_ids = fields.Many2many('ketchup.services', string='service_ids')
-    photo_ids = fields.One2many('ir.attachment', 'tour_id', string='photo_ids')
-    type = fields.Selection(string='type', selection=[(0, 'Hot'), (1, 'New'), (2, 'Popular')])
+    place_ids = fields.Many2many('ketchup.places', string='Места')
+    blog_ids = fields.One2many('ketchup.blog', 'tour_id', string='Рецензии')
+    service_ids = fields.Many2many('ketchup.services', string='Услуги')
+    photo_ids = fields.One2many('ir.attachment', 'tour_id', string='Фотографии')
+    type = fields.Selection(string='type', selection=[(0, 'Горячее'), (1, 'Новое'), (2, 'Популярное')])
 
     @api.one
     @api.depends("place_ids", "service_ids")
@@ -25,4 +25,4 @@ class KetchupTours(models.Model):
         for model in self.service_ids:
             self.total_price += model.price
 
-    total_price = fields.Integer(default=0, string='price', compute="compute_total_price")
+    total_price = fields.Integer(default=0, string='Общая цена', compute="compute_total_price")
