@@ -12,7 +12,7 @@ class KetchupPlaces(models.Model):
     rating = fields.Float(string="rating")
 
     tour_ids = fields.Many2many('ketchup.tours', string='tour_ids')
-    blog_id = fields.One2many('ketchup.blog', 'place_id', string='blog_id')
+    blog_ids = fields.One2many('ketchup.blog', 'place_id', string='blog_id')
 
 
 class KetchupAttachment(models.Model):
